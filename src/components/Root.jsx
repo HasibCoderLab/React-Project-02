@@ -1,8 +1,11 @@
 import React from 'react'
+import Navbar from './Navbar/Navbar'
 
 const Root = () => {
   return (
-    <div>Root</div>
+    <div>
+        <Navbar></Navbar>
+    </div>
   )
 }
 

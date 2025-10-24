@@ -1,9 +1,23 @@
 import React from 'react'
 
 const Navbar = () => {
-  return (
-    <div>Navbar</div>
-  )
+    return (
+        <nav className='bg-green-600 py-4 md:py-6'>
+
+            <div className=' container mx-auto flex   justify-between items-center '>
+                <h1 className='text-2xl'>Logo</h1>
+
+                <ul className=' flex  space-x-4  md:space-x-6 hover:cursor-pointer'>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Blogs</li>
+                    <li>Contact</li>
+                </ul>
+                <button>Login</button>
+            </div>
+
+        </nav>
+    )
 }
 
 export default Navbar
