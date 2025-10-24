@@ -15,9 +15,12 @@ const Navbar = () => {
                 {/* =========================     Mobile Menu Btn   ============================ */}
 
                 <div>
-                    <button>
-                        <TiThMenu />
-                        <IoMdCloseCircle />
+                    <button onClick={toggleMenu}>
+                        {
+                            icon ? <IoMdCloseCircle /> :   <TiThMenu /> 
+                        }
+                       
+                        
                     </button>
                 </div>
 
