@@ -35,11 +35,23 @@ In your index.css, import Tailwind:
 ```css
 @import "tailwindcss";
 ```
+---
+
+# 🌐 React Router Setup
+
+## 1️⃣ Install React Router DOM
+```bash
+npm install react-router-dom
+```
+---
+
 ## 🖥️ Run the Project
 Start the development server:
 ```bash
 npm run dev
 ```
+
+
 ---
 # 💡 Technologies Used
 
