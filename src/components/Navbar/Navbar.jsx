@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { TiThMenu } from "react-icons/ti";
 import { IoMdCloseCircle } from "react-icons/io";
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
     // ============  useState  + Function ================= 
@@ -26,11 +27,12 @@ const Navbar = () => {
                 </div>
 
                 <ul className=' hidden  md:flex  space-x-4  md:space-x-6 hover:cursor-pointer'>
-                    <li>Home</li>
-                    <Link></Link>
-                    <li>About</li>
-                    <li>Blogs</li>
-                    <li>Contact</li>
+                    
+                    <Link>Home </Link>    
+                    <Link>About </Link>    
+                    <Link>Blogs </Link>    
+                    <Link>Products </Link>    
+                    <Link>Contact </Link>                       
                 </ul>
                 <button className=' hidden md:block '>Login</button>
 
