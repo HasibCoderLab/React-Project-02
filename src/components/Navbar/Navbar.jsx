@@ -8,7 +8,7 @@ const Navbar = () => {
     const toggleMenu = () =>{
         setIcon(!icon);
     }
-    
+
     return (
         <nav className='bg-green-600 text-white py-4 md:py-6'>
             <div className=' container mx-auto flex   justify-between items-center '>
@@ -24,13 +24,13 @@ const Navbar = () => {
                     </button>
                 </div>
 
-                <ul className=' flex  space-x-4  md:space-x-6 hover:cursor-pointer'>
+                <ul className=' hidden  md:flex  space-x-4  md:space-x-6 hover:cursor-pointer'>
                     <li>Home</li>
                     <li>About</li>
                     <li>Blogs</li>
                     <li>Contact</li>
                 </ul>
-                <button>Login</button>
+                <button className=' hidden'>Login</button>
             </div>
 
         </nav>
