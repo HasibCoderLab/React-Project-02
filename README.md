@@ -43,13 +43,10 @@ npm run dev
 ---
 # 💡 Technologies Used
 
-⚛️**React**
-
-⚡ **Vite**
-
-🎨 **Tailwind CSS**
-
-🧩 **useState**
-🧩 **Function**
-
+⚛️ **React**  
+⚡ **Vite**  
+🎨 **Tailwind CSS**  
+🧭 **React Router DOM (v7.9.4)**  
+🧩 **useState**  
+🧩 **Function**  
 🧩 **Condition**
