@@ -28,7 +28,7 @@ const Navbar = () => {
 
                 <ul className=' hidden  md:flex  space-x-4  md:space-x-6 hover:cursor-pointer'>
 
-                    <Link>Home </Link>
+                    <Link to={"/"}>Home </Link>
                     <Link>About </Link>
                     <Link>Blogs </Link>
                     <Link>Products </Link>
