@@ -2,7 +2,7 @@
 
   const Hero = () => {
     return (
-      <div className='flex flex-col bg-green-500  text-white px-4 items-center text-center justify-center h-[85vh] md:h-[82vh]' style={{
+      <div className='flex flex-col bg-green-500  text-white px-4 items-center text-center justify-center h-[91vh] md:h-[82vh]' style={{
         backgroundImage: "url('favicon.jpeg')",
         backgroundPosition: "center",
         backgroundSize: "cover",
