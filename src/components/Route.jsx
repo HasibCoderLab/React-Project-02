@@ -29,7 +29,7 @@ const router = createBrowserRouter([
                 Component: Products
             },
             {
-                index: "Contact",
+                path: "Contact",
                 Component: Contact
             }
         ]
