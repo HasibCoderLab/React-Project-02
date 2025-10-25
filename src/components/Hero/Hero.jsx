@@ -1,9 +1,10 @@
   import React from 'react'
+import bgImg from '../../assets/bg.jpeg';
 
   const Hero = () => {
     return (
-      <div className='flex flex-col bg-green-500  text-white px-4 items-center text-center justify-center h-[91vh] md:h-[82vh]' style={{
-        backgroundImage: "url('favicon.jpeg')",
+      <div className='flex flex-col text-white px-4 items-center text-center justify-center h-[91vh] md:h-[82vh]' style={{
+        backgroundImage: `url(${bgImg})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }} >

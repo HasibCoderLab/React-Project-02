@@ -11,17 +11,15 @@ const Navbar = () => {
     const location = useLocation();
     useEffect(() => {
         setActiveLink(location.pathname || "/");
-    }, [])
+    }, [location.pathname]);
 
     // ============  Functions ================= 
-
     const toggleMenu = () => {
         setIcon(!icon);
     }
+    
     const handlePath = (path) => {
         setActiveLink(path);
-        console.log("hi");
-
     }
 
     return (
@@ -45,22 +43,22 @@ const Navbar = () => {
                         className={`${activeLink === "/" ? 'text-sky-300' : 'hover:text-green-400 '}`}>
                         Home
                     </Link>
-                    <Link to="About"
+                    <Link to="/About"
                         onClick={() => handlePath("/About")}
                         className={`${activeLink === "/About" ? 'text-sky-300' : 'hover:text-green-400'}`}>
                         About
                     </Link>
-                    <Link to="Blogs"
+                    <Link to="/Blogs"
                         onClick={() => handlePath("/Blogs")}
                         className={`${activeLink === "/Blogs" ? 'text-sky-300' : 'hover:text-green-400'}`}>
                         Blogs
                     </Link>
-                    <Link to="Products"
+                    <Link to="/Products"
                         onClick={() => handlePath("/Products")}
                         className={`${activeLink === "/Products" ? 'text-sky-300' : 'hover:text-green-400'}`}>
                         Products
                     </Link>
-                    <Link to="Contact"
+                    <Link to="/Contact"
                         onClick={() => handlePath("/Contact")}
                         className={`${activeLink === "/Contact" ? 'text-sky-300' : 'hover:text-green-400'}`}>
                         Contact
