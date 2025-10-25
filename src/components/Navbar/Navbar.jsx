@@ -7,15 +7,17 @@
     const Navbar = () => {
         // ============  useStates ================= 
         const [icon, setIcon] = useState(false);
-        const [path, setPath] = useState("/")
+        const [activeLink, setActiveLink] = useState("/")
 
         // ============  Functions ================= 
 
         const toggleMenu = () => {
             setIcon(!icon);
         }
-        const handlePath = () => {
-            setPath(path)
+        const handlePath = (path) => {
+            setActiveLink(path);
+            console.log("hi");
+            
         }
 
         return (
@@ -24,8 +26,8 @@
                     <h1 className='text-2xl ml-4 font-bold'>Logo</h1>
 
                     {/* =========================     Mobile Menu Btn   ============================ */}
-                    <div className='md:hidden mr-4'>
-                        <button onClick={toggleMenu}>
+                    <div className=' md:hidden'>
+                        <button  onClick={toggleMenu}>
                             {
                                 icon ? <IoMdCloseCircle /> : <TiThMenu />
                             }
@@ -35,32 +37,32 @@
 
                     <ul className='hidden md:flex space-x-4 md:space-x-6 hover:cursor-pointer'>
                         <Link to="/"
-                        onClick={() => handlePath()}
-                        className='hover:hover:text-green-400 '>
+                        onClick={() => handlePath("/")}
+                        className={ `${ activeLink === "/" ? 'text-sky-300' : 'hover:text-green-400 '}`}>
                         Home
                         </Link>
                             <Link to="About" 
-                            onClick={() => handlePath()}
-                        className='hover:text-green-400'>
+                            onClick={() => handlePath("/About")}
+                        className={`${activeLink === "/About" ?  'text-sky-300' : 'hover:text-green-400'}`}>
                         About
                         </Link>
                             <Link to="Blogs" 
-                            onClick={() => handlePath()}
-                        className='hover:text-green-400'>
+                            onClick={() => handlePath("/Blogs" )}
+                        className={`${activeLink === "/Blogs" ?  'text-sky-300' : 'hover:text-green-400'}`}>
                         Blogs
                         </Link>
                             <Link to="Products" 
-                            onClick={() => handlePath()}
-                        className='hover:text-green-400'>
+                            onClick={() => handlePath("/Products" )}
+                        className={`${activeLink === "/Products" ?  'text-sky-300' : 'hover:text-green-400'}`}>
                         Products
                         </Link>
                             <Link to="Contact" 
-                            onClick={() => handlePath()}
-                        className='hover:text-green-400 '>
+                            onClick={() => handlePath("/Contact" )}
+                        className={`${activeLink === "/Contact" ?  'text-sky-300' : 'hover:text-green-400'}`}>
                         Contact
                         </Link>
                     </ul>
-                    <button className='hidden md:block bg-white  text-black p-2 rounded-[10px]'>Login</button>
+                    <button className='hidden   cursor-pointer md:block md:mr-5 bg-white  text-black p-2 rounded-[10px]'>Login</button>
 
 
                     {/*   ========================= Mobile Menu Collapsible ===== */}
