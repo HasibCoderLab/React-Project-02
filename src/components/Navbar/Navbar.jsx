@@ -33,17 +33,17 @@ const Navbar = () => {
                     <Link to="Products" className='hover:text-green-400'>Products</Link>
                     <Link to="Contact" className='hover:text-green-400 '>Contact</Link>
                 </ul>
-                <button className='hidden md:block'>Login</button>
+                <button className='hidden md:block bg-white  text-black p-2 rounded-[10px]'>Login</button>
 
 
                 {/*   ========================= Mobile Menu Collapsible ===== */}
                 <div className={`bg-green-700 md:hidden w-full absolute top-full left-0 ${icon ? "block" : "hidden"}`}>
-                    <ul className='flex flex-col items-center py-4'>
+                    <ul className='flex flex-col items-center py-4 space-y-4 '>
                         <li>Home</li>
                         <li>About</li>
                         <li>Blogs</li>
                         <li>Contact</li>
-                        <li><button className=''>Login</button></li>
+                        <li><button className=' bg-white  text-black p-2 rounded-[10px]'>Login</button></li>
                     </ul>
                 </div>
             </div>
