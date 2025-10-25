@@ -26,15 +26,15 @@ const Navbar = () => {
                     </button>
                 </div>
 
-                <ul className=' hidden  md:flex  space-x-4  md:space-x-6 hover:cursor-pointer'>
-
-                    <Link to={"/"}>Home </Link>
-                    <Link>About </Link>
-                    <Link>Blogs </Link>
-                    <Link>Products </Link>
-                    <Link>Contact </Link>
+                <ul className='hidden md:flex space-x-4 md:space-x-6 hover:cursor-pointer'>
+                    <Link to="/" className='hover:hover:text-green-400 '>Home</Link>
+                    <Link to="About" className='hover:text-green-400'>About</Link>
+                    <Link to="Blogs" className='hover:text-green-400'>Blogs</Link>
+                    <Link to="Products" className='hover:text-green-400'>Products</Link>
+                    <Link to="Contact" className='hover:text-green-400 '>Contact</Link>
                 </ul>
-                <button className=' hidden md:block '>Login</button>
+                <button className='hidden md:block'>Login</button>
+
 
                 {/*   ========================= Mobile Menu Collapsible ===== */}
                 <div className={`bg-green-700 md:hidden w-full absolute top-full left-0 ${icon ? "block" : "hidden"}`}>
