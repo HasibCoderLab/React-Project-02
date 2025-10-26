@@ -17,7 +17,7 @@ const Navbar = () => {
     const toggleMenu = () => {
         setIcon(!icon);
     }
-    
+
     const handlePath = (path) => {
         setActiveLink(path);
     }
@@ -28,7 +28,7 @@ const Navbar = () => {
                 <h1 className='text-2xl ml-4 font-bold'>Logo</h1>
 
                 {/* =========================     Mobile Menu Btn   ============================ */}
-                <div className=' md:hidden'>
+                <div className='mr-4 md:hidden'>
                     <button onClick={toggleMenu}>
                         {
                             icon ? <IoMdCloseCircle /> : <TiThMenu />
@@ -69,14 +69,31 @@ const Navbar = () => {
 
                 {/*   ========================= Mobile Menu Collapsible ===== */}
                 <div className={`bg-green-700 md:hidden w-full absolute top-full left-0 ${icon ? "block" : "hidden"}`}>
-                    <ul className='flex flex-col items-center py-4 space-y-4 '>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Blogs</li>
-                        <li>Contact</li>
-                        <li><button className=' bg-white  text-black p-2 rounded-[10px]'>Login</button></li>
+                    <ul className='flex flex-col items-center py-4 space-y-4'>
+                        <Link to="/"
+                            onClick={() => { handlePath("/"); setIcon(false) }}
+                            className={`${activeLink === "/" ? 'text-sky-300' : 'hover:text-green-400'}`}>
+                            Home
+                        </Link>
+                            <Link to="/About"
+                            onClick={() => { handlePath("/About"); setIcon(false) }}
+                            className={`${activeLink === "/About" ? 'text-sky-300' : 'hover:text-green-400'}`}>
+                            About
+                        </Link>
+                            <Link to="/Blogs"
+                            onClick={() => { handlePath("/Blogs"); setIcon(false) }}
+                            className={`${activeLink === "/Blogs" ? 'text-sky-300' : 'hover:text-green-400'}`}>
+                            Blogs
+                        </Link>
+                             <Link to="/Contact"
+                            onClick={() => { handlePath("/Contact"); setIcon(false) }}
+                            className={`${activeLink === "/Contact" ? 'text-sky-300' : 'hover:text-green-400'}`}>
+                            Contact
+                        </Link>
+                        <button className='bg-white text-black p-2 rounded-[10px]'>Login</button>
                     </ul>
                 </div>
+
             </div>
         </nav>
     )
