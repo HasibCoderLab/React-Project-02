@@ -2,8 +2,11 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='bg-red-300 h-[10vh] md:h-[10vh] text-center'>
-        <h1 className='text-3xl' >Copyright &copy;</h1>
+    <div className='bg-green-500 h-[10vh] md:h-[10vh]  flex justify-center items-center'>
+      <p className="text-lg font-medium">
+        © {new Date().getFullYear()} Hasib Hasan. All rights reserved.
+      </p>
+
 
     </div>
   )
